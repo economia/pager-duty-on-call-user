@@ -107,3 +107,4 @@ pagerduty.getOncallUser(scheduler_id, api_key, options).then(user => {
     ],
   total: 4 
 }
+```
