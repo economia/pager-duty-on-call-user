@@ -104,3 +104,6 @@ pagerduty.getOncallUser(scheduler_id, api_key, options).then(user => {
         country_code: 42,
         enabled: true 
       } 
+    ],
+  total: 4 
+}
