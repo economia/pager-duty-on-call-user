@@ -1,0 +1,16 @@
+{
+  "name": "pagerdutyoncalluser",
+  "version": "1.0.0",
+  "description": "small library for getting oncall user info from pagerduty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/it-economia/pagerdutyoncalluser.git"
+  },
+  "author": "sklep@economia.cz",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/it-economia/pagerdutyoncalluser#readme"
+}
