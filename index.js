@@ -12,10 +12,12 @@ async function getOncallUser(schedulerID, serviceKey, options = { timeZone: '', 
   const userIdResponse = await request(requestHost, requestPath, requestHeaders)
   const userIdResponseJson = JSON.parse(userIdResponse)
 
-  if (!!userIdResponseJson.error) {
-    return new Error(userIdResponseJson.error.message)
+  if (userIdResponseJson.error) {
+    throw new Error(userIdResponseJson.error.message)
+  } else if (!userIdResponseJson.oncalls[0].user.id) {
+    throw new Error('No oncall user found.')
   } else {
-    const userId = JSON.parse(userIdResponse).oncalls[0].user.id
+    const userId = userIdResponseJson.oncalls[0].user.id
     requestPath = `/users/${userId}/contact_methods`
 
     const userInfo = await request(requestHost, requestPath, requestHeaders)

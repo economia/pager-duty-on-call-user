@@ -52,9 +52,14 @@ const options = {
   until: '2018-07-13T11:19:52.524963'
 }
 
-pagerduty.getOncallUser(scheduler_id, api_key, options).then(user => {
-  console.log(user)
-})
+try {
+  pagerduty.getOncallUser(scheduler_id, api_key, options).then(user => {
+    console.log(user)
+  })
+} catch(e) {
+  console.log(e)
+}
+
 ```
 
 ##Result
