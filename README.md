@@ -1,6 +1,6 @@
-#PagerDuty getOncallUser
+#pagerduty-oncall-user
 
-Small library to get info about oncall member of your pagerduty schedule
+Small library to get info about oncall member of your pagerduty schedule. ***No dependecies!***
 
 ###Install
 
@@ -34,8 +34,11 @@ const pagerduty = require('pagerduty-oncall-user')
     
 - #####options (object)
 
-    ***Optional*** parameter, It represents object, currently with only one attribute, which is ***timeZone***. You can see your Time Zone right under scheduler's name in PagerDuty. Default value for ***timeZone*** is ***"Europe/Prague"***.
-    
+    This parameter is ***optional***. Object knows three attributes: ***timeZone***, ***since*** and ***until***. These attributes 
+    must be used ***together***! You can see your Time Zone right under scheduler's name in PagerDuty. With ***since*** and ***until*** you can 
+    specify day and time, in which you want to find out who has oncall. These attributes must be different from each other and have to be in
+    ***iso format*** (for example _'2018-07-13T11:19:51.524963'_).
+
 ##Example
 
 ```
@@ -44,7 +47,9 @@ const pagerduty = require('pagerduty-oncall-user')
 const scheduler_id = 'O86QD1E'
 const api_key = 'jsusDJoq4X9p4e1n9i5s'
 const options = {
-  timeZone: 'Europe/London'
+  timeZone: 'Europe/Prague',
+  since: '2018-07-13T11:19:51.524963',
+  until: '2018-07-13T11:19:52.524963'
 }
 
 pagerduty.getOncallUser(scheduler_id, api_key, options).then(user => {
