@@ -14,7 +14,7 @@ async function getOncallUser(schedulerID, serviceKey, options = { timeZone: '', 
 
   if (userIdResponseJson.error) {
     throw new Error(userIdResponseJson.error.message)
-  } else if (!userIdResponseJson.oncalls[0].user.id) {
+  } else if (!(Array.isArray(userIdResponseJson.oncalls) && userIdResponseJson.oncalls[0].user.id)) {
     throw new Error('No oncall user found.')
   } else {
     const userId = userIdResponseJson.oncalls[0].user.id
