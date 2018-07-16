@@ -24,15 +24,15 @@ const pagerduty = require('pagerduty-oncall-user')
 
 ####getOncallUser(scheduler_id, api_key, options)
 
-- #####scheduler_id (string)
+- ####scheduler_id (string)
 
     This parameter is ***required***, It represents the ID which you can find in the URL address of the scheduler in PagerDuty.
 
-- #####api_key (string)
+- ####api_key (string)
 
     This parameter is ***required***. 
     
-- #####options (object)
+- ####options (object)
 
     This parameter is ***optional***. Object knows three attributes: ***timeZone***, ***since*** and ***until***. These attributes 
     must be used ***together***! You can see your Time Zone right under scheduler's name in PagerDuty. With ***since*** and ***until*** you can 
@@ -54,9 +54,9 @@ const options = {
 
 pagerduty.getOncallUser(scheduler_id, api_key, options).then(user => {
   console.log(user)
-}).catch(error) {
+}).catch(error => {
   console.log(error)
-}
+})
 
 ```
 
