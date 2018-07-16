@@ -24,20 +24,20 @@ const pagerduty = require('pagerduty-oncall-user')
 
 ####getOncallUser(scheduler_id, api_key, options)
 
-- ####scheduler_id (string)
+- **scheduler_id (string)**
 
     This parameter is ***required***, It represents the ID which you can find in the URL address of the scheduler in PagerDuty.
 
-- ####api_key (string)
+- **api_key (string)**
 
     This parameter is ***required***. 
     
-- ####options (object)
+- **options (object)**
 
-    This parameter is ***optional***. Object knows three attributes: ***timeZone***, ***since*** and ***until***. These attributes 
-    must be used ***together***! You can see your Time Zone right under scheduler's name in PagerDuty. With ***since*** and ***until*** you can 
-    specify day and time, in which you want to find out who has oncall. These attributes must be different from each other and have to be in
-    ***iso format*** (for example _'2018-07-13T11:19:51.524963'_).
+    This parameter is **optional**. Possible object keys are **timeZone**, **since** and **until**. **Since** and **until** must be 
+    used together! You can see your Time Zone right under scheduler’s name in PagerDuty. With **since** and **until** you can specify 
+    the interval for which you want to get the on-call person. These attributes must be different from each other and have to be in 
+    **ISO format** (for example ‘2018-07-13T11:19:51.524963’).
 
 ##Example
 
