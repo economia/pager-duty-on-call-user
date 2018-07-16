@@ -1,6 +1,6 @@
 {
   "name": "pagerduty-oncall-user",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "small library for getting oncall user info from pagerduty",
   "main": "index.js",
   "scripts": {
