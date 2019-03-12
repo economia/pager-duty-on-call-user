@@ -8,9 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/it-economia/pagerdutyoncalluser.git"
+    "url": "git+https://github.com/economia/pager-duty-on-call-user.git"
+  },
+  "bugs": {
+    "url": "https://github.com/economia/pager-duty-on-call-user/issues"
   },
   "author": "sklep@economia.cz",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/it-economia/pagerdutyoncalluser#readme"
+  "license": "ISC"
 }

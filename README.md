@@ -1,28 +1,28 @@
-#pagerduty-oncall-user
+# Pagerduty on-call user
 
 Small library to get info about oncall member of your pagerduty schedule. ***No dependecies!***
 
-###Install
+## Install
 
 ```
 npm install pagerduty-oncall-user --save
 ```
 
-###ES6 import
+## ES6 import
 
 ```
 import pagerduty from 'pagerduty-oncall-user'
 ```
 
-###Common js import
+## Common js import
 
 ```
 const pagerduty = require('pagerduty-oncall-user')
 ```
 
-##Functions
+## Functions
 
-####getOncallUser(scheduler_id, api_key, options)
+### getOncallUser(scheduler_id, api_key, options)
 
 - **scheduler_id (string)**
 
@@ -39,7 +39,7 @@ const pagerduty = require('pagerduty-oncall-user')
     the interval for which you want to get the on-call person. These attributes must be different from each other and have to be in 
     **ISO format** (for example ‘2018-07-13T11:19:51.524963’).
 
-##Example
+## Example
 
 ```
 const pagerduty = require('pagerduty-oncall-user')
@@ -60,7 +60,7 @@ pagerduty.getOncallUser(scheduler_id, api_key, options).then(user => {
 
 ```
 
-##Result
+## Result
 ```
 { 
   contact_methods:
