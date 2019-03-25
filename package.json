@@ -1,5 +1,5 @@
 {
-  "name": "@economia/pagerduty-oncall-user",
+  "name": "pagerduty-oncall-user",
   "version": "1.0.5",
   "description": "small library for getting oncall user info from pagerduty",
   "main": "index.js",
@@ -14,6 +14,5 @@
     "url": "https://github.com/economia/pager-duty-on-call-user/issues"
   },
   "author": "sklep@economia.cz",
-  "license": "ISC",
-  "homepage": "https://github.com/economia/pager-duty-on-call-user#readme"
+  "license": "ISC"
 }
